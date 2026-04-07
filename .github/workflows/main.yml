@@ -13,11 +13,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Terraform
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
       - name: Terraform Init
         run: terraform init
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      - name: Terraform Validate
+        run: terraform validate
